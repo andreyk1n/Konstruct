@@ -76,3 +76,9 @@ body {
 .finished {
     border-right: none; /* Видаляємо курсор */
 }
+
+@media (max-width: 576px) {
+    #typing-text {
+        white-space: wrap;
+    }
+}
