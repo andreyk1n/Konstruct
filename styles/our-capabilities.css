@@ -92,6 +92,7 @@
 
     .card-with-icon__container {
         flex-direction: column;
+        gap: 20px;
     }
     
     .card-with-icon {
