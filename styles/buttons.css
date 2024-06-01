@@ -1,0 +1,37 @@
+.button {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    font-weight: bold;
+    border: 0;
+    border: 3px solid #00A4E5;
+    background-color: #00A4E5;
+    transition-duration: .4s;
+    color: white;
+    font-size: 13px;
+}
+
+.button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: transparent;
+    border:3px solid #48555B;
+    color: #48555B;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group input {
+    width: 252px;
+    height: 40px;
+    outline: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}

@@ -1,0 +1,34 @@
+.get-in-touch {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/get-in-touch-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.get-in-touch__content {
+    width: 350px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.get-in-touch__title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #48555B;
+}
+
+@media (max-width: 1200px) {
+    .get-in-touch {
+        height: 300px;
+    }
+}

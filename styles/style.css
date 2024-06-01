@@ -1,0 +1,78 @@
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./main-hero.css);
+@import url(./our-story.css);
+@import url(./our-capabilities.css);
+@import url(./buttons.css);
+@import url(./get-in-touch.css);
+@import url(./newsletter-signup.css);
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    overflow-x: hidden;
+}
+
+.blue-text {
+    color: #16ACE8;
+}
+
+.text-area {
+    width: 250px;
+    letter-spacing: 1.5px;
+
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.soc-icons img {
+    width: 18px;
+    height: 18px;
+    transition-duration: .3s;
+}
+
+.soc-icons img:hover  {
+    transform: scale(1.2);
+}
+
+#typing-text {
+    border-right: 2px solid white; /* Показуємо мімічну "курсор" */
+    white-space: nowrap; /* Забезпечуємо відображення тексту в одному рядку */
+    overflow: hidden; /* Приховуємо зайвий текст, який не вміщається в контейнер */
+    animation: blink-cursor 1.3s step-end infinite; /* Анімація блимаючого курсора */
+}
+
+@keyframes typing {
+    from { width: 0; } /* Початковий стан - текст не видно */
+    to { width: 100%; } /* Кінцевий стан - весь текст показано */
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+.typing-animation {
+    animation: typing 3s steps(40, end), blink-cursor 0.75s step-end infinite; /* Анімація типографії, 40 кроків до завершення */
+}
+
+.finished {
+    border-right: none; /* Видаляємо курсор */
+}

@@ -1,0 +1,134 @@
+.header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    /* backdrop-filter: blur(3px);  */
+    background-color: white;
+    margin: 0 0 30px 0;
+}
+
+.header_shadow {
+    box-shadow: 0px 7px 14px -5px rgba(86, 86, 86, 0.75);
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+
+.header__content {
+    width: 70%;
+    max-width: 1460px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.header__nav-links a {
+    color: #48555B;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: .3s;
+}
+
+.header__nav-links a:hover {
+    color: #00A4E5;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .header__content {
+        width: 96%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .header__content {
+        width: 96%;
+    }
+}
+
+/* ----------- */
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.burger-menu__line {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-menu.active .burger-menu__line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active .burger-menu__line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-menu__line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+  /* Адаптивні стилі */
+  @media (max-width: 767px) {
+    .header__nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .header__nav-links.active {
+        display: flex;
+        z-index: 5;
+        width: 100%;
+        height: 500px;
+        box-shadow: 0px 7px 14px -5px rgba(86, 86, 86, 0.75);
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .header__nav-links.active a {
+        padding-bottom: 15px;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__nav-links.active {
+        font-size: 20px;
+    }
+}
